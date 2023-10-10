@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %}Voting Results for {{ category.categoryName }} {% endblock %}
+{% load static %}
+
+{% block content %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Vote Result</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Vote Result</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <div class="card card-primary card-outline card-tabs">
+                  <div class="card-header p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Voting Results for {{ category.categoryName }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-three-tabContent">
+                        {% if success_message %}
+                        <div class="alert alert-success" role="alert" id="success-message">
+                            {{ success_message }}
+                        </div>
+                        {% endif %}
+
+                        {% if error_message %}
+                        <div class="alert alert-danger" role="alert" id="error-message">
+                            {{ error_message }}
+                        </div>
+                        {% endif %}
+
+                      <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                              <thead>
+                              <tr>
+                                <th>Candidates </th>
+                                <th>Votes</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+
+                                {% for candidate, votes in sorted_candidates %}
+                                <tr>
+                                    <td>{{ candidate.student.name }}</td>
+                                    <td>{{ votes }}</td>
+                                </tr>
+
+                                {% endfor %}
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <th>Candidates </th>
+                                  <th>Votes</th>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                      </div>
+                      
+                      <!-- <div class="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-settings" role="tabpanel" aria-labelledby="custom-tabs-three-settings-tab">
+                      </div> -->
+                    </div>
+                  </div>
+                  <!-- /.card -->
+                </div>
+              </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  
+  {% endblock %}

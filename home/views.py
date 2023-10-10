@@ -1,7 +1,77 @@
-from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import *
+
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+from django.db import IntegrityError
+
+def signingAdmin(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('homeAdmin')
+        else:
+            messages.info(request, 'Invalid Username or Password')
+            return redirect('signingAdmin')
+    else:
+        return render(request, 'login.html')
+
+def logoutAdmin(request):
+    logout(request)
+    return redirect('signingAdmin')
+
+def homeAdmin(request):
+    if request.user.is_authenticated:
+        students_count = Student.objects.count()
+        category_count = Category.objects.count()
+        vote_count = Vote.objects.count()
+        candidate_count = Candidate.objects.count()
+        context={
+            'students_count':students_count,
+            'category_count':category_count,
+            'vote_count':vote_count,
+            'candidate_count':candidate_count
+            }
+        return render(request, "index.html", context)
+    else:
+        messages.info(request, 'You are not administrator')
+        return redirect('signingAdmin')
+
+def categoryVoting(request):
+    vote_category = Category.objects.all()
+    success_message = ""
+
+    return render(request, "voting_category.html", {'vote_category': vote_category, 'success_message': success_message})
+
+def viewVots(request, category_id):
+    try:
+        category = Category.objects.get(categoryId=category_id)
+    except Category.DoesNotExist:
+        category = None
+
+    if category:
+        candidates = Candidate.objects.filter(category=category)
+
+        candidate_votes = {}
+
+        for candidate in candidates:
+            votes_count = Vote.objects.filter(category=category, candidate=candidate).count()
+            candidate_votes[candidate] = votes_count
+        sorted_candidates = sorted(candidate_votes.items(), key=lambda x: x[1], reverse=True)
+
+        return render(request, "voting_result.html", {'category': category, 'sorted_candidates': sorted_candidates})
+    else:
+        return render(request, "category_not_found.html") 
 
 @csrf_exempt
 def ussdapp(request):
@@ -62,18 +132,22 @@ def ussdapp(request):
                 if 0 <= candidate_idx < len(candidates):
                     selected_candidate = candidates[candidate_idx]
                     reg_number = level[1]
-                    user,create = Student.objects.get_or_create(regNumber=reg_number)
+                    user, created = Student.objects.get_or_create(regNumber=reg_number)
 
-                    # Create a new Vote object
-                    vote = Vote(student=user, category=category, candidate=selected_candidate, vots="1")
-                    vote.save()
-                    response = "END Thank you for voting!"
+                    # Check if the student has already voted in this category
+                    if not Vote.objects.filter(student=user, category=category).exists():
+                        # Create a new Vote object
+                        vote = Vote(student=user, category=category, candidate=selected_candidate, vots="1")
+                        vote.save()
+                        response = "END Thank you for voting!"
+                    else:
+                        response = "END You have already voted in this category."
                 else:
                     response = "END Invalid candidate selection."
             else:
                 response = "END Invalid category selection."
         else:
-            response = "END Invalid input."
+            response = "END Thank you for using our app."
 
         return HttpResponse(response)
     return HttpResponse('Welcome')
