@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %} {% endblock %}</title>
+  <title>{% block title %} {% endblock %}</title> 
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -142,7 +142,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fas fa-th-large"></i>
               <p>
                 Results
                 <i class="fas fa-angle-left right"></i>
@@ -157,6 +157,14 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'voterRegistered' %}" class="nav-link ">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Voter Registered
+              </p>
+            </a>
           </li>
           <li class="nav-header">Account</li>
           <li class="nav-item">

@@ -23,27 +23,45 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Staff Sign in</p>
+      <p class="login-box-msg">Register as Voter</p>
 
-      <form class="user" action="{% url 'signingAdmin' %}" method="post">
+      <form class="user" action="{% url 'voterRegister' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
-            {% for message in messages %}
-            <div class="alert alert-danger" role="alert">
-                {{message}}
+            {% if success_message %}
+            <div class="alert alert-success" role="alert" id="success-message">
+                {{ success_message }}
             </div>
-            {% endfor %}
+            {% endif %}
+            {% if error_message %}
+            <div class="alert alert-warning" role="alert" id="success-message">
+                {{ error_message }}
+            </div>
+            {% endif %}
         </div>
         <div class="input-group mb-3">
-          <input type="text" name="username" class="form-control" placeholder="Email">
-          <div class="input-group-append">
+        <select name="studentIds" class="form-control"  id="">
+            <option value="">Select Regnumber</option>
+            {% for studentss in students %}
+                <option value="{{ studentss.studentId }}">{{ studentss.regNumber }}</option>
+            {% endfor %}
+        </select>
+         <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control" placeholder="Password">
+          <input type="text" name="names" class="form-control" placeholder="Names">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="number" name="pin" class="form-control" placeholder="PIN">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -51,24 +69,16 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div> 
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Login Now</button>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
       <br>
       <p class="mb-0">
-        <a href="{% url 'voterRegister' %}" class="text-center">Register as Voter  </a> <br>
+        <a href="{% url 'signingAdmin' %}" class="text-center text-success">Staff Sign in </a> <br>
       </p>
     </div>
     <!-- /.login-card-body -->

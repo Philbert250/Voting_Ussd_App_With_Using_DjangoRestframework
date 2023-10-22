@@ -24,12 +24,19 @@ class Candidate(models.Model):
     def __str__(self):
         return str(self.student) 
     
+class Voters(models.Model):
+    voterId = models.UUIDField(primary_key=True,editable=False,default=uuid.uuid4)
+    student = models.ForeignKey(Student, null=True, blank=True, on_delete=models.SET_NULL)
+    names  = models.CharField(max_length=255)
+    pin  = models.CharField(max_length=255)
+    def __str__(self):
+        return str(self.student)     
 
 class Vote(models.Model):
     voteId = models.UUIDField(primary_key=True,editable=False,default=uuid.uuid4)
-    student = models.ForeignKey(Student, null=True, blank=True, on_delete=models.SET_NULL)
+    voter = models.ForeignKey(Voters, null=True, blank=True, on_delete=models.SET_NULL)
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL)
     candidate = models.ForeignKey(Candidate, null=True, blank=True, on_delete=models.SET_NULL)
     vots  = models.CharField(max_length=255)
     def __str__(self):
-        return str(self.student) 
+        return str(self.voter) 
