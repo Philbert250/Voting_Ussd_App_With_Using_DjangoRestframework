@@ -27,7 +27,7 @@ class Candidate(models.Model):
 class Voters(models.Model):
     voterId = models.UUIDField(primary_key=True,editable=False,default=uuid.uuid4)
     student = models.ForeignKey(Student, null=True, blank=True, on_delete=models.SET_NULL)
-    names  = models.CharField(max_length=255)
+    email  = models.CharField(max_length=255)
     pin  = models.CharField(max_length=255)
     def __str__(self):
         return str(self.student)     

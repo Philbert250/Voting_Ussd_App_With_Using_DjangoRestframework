@@ -8,6 +8,7 @@ urlpatterns =[
     ##################### ADMIN URLS #####################
     path('', views.signingAdmin, name='signingAdmin'),
     path('voterRegister', views.voterRegister, name='voterRegister'),
+    path('forgotPin', views.forgotPin, name='forgotPin'),
     path('homeAdmin', views.homeAdmin, name='homeAdmin'),
     path('', views.logoutAdmin, name='logoutAdmin'),
     path('categoryVoting', views.categoryVoting, name='categoryVoting'),

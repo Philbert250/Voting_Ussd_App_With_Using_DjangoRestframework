@@ -23,9 +23,9 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Register as Voter</p>
+      <p class="login-box-msg">Forgot voter Pin</p>
 
-      <form class="user" action="{% url 'voterRegister' %}" method="post">
+      <form class="user" action="{% url 'forgotPin' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
             {% if success_message %}
@@ -56,21 +56,10 @@
             </div>
           </div>
         </div>
-        <div class="input-group mb-3">
-          <input type="number" name="pin" class="form-control" placeholder="PIN">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
         <div class="row">
           <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-          </div>
-          <div class="col-8">
-            <a href="{% url 'forgotPin' %}" class="text-center text-success">Forgot Pin</a>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block">Reset Pin</button>
           </div>
           <!-- /.col -->
         </div>

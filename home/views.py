@@ -2,6 +2,7 @@ from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import *
 import logging
+from django.core.mail import send_mail
 
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -13,34 +14,66 @@ import json
 from django.contrib.auth.hashers import make_password, check_password
 from django.contrib.auth import logout
 from django.db import IntegrityError
+import random
+from django.core.exceptions import ObjectDoesNotExist
 
 
 def voterRegister(request):
-    student = Student.objects.all()
+    students = Student.objects.all()
     success_message = ""
     error_message = ""
     
     if request.method == 'POST':
-        student_id_reg = request.POST['studentIds']
-        names = request.POST['names']
+        regnumber = request.POST['regnumber']
+        email = request.POST['email']
         plain_pin = request.POST['pin']
         
-        if not Voters.objects.filter(student__studentId=student_id_reg).exists():
-            student_id = Student.objects.get(studentId=student_id_reg)
+        try:
+            student = Student.objects.get(regNumber=regnumber)
             
-            hashed_pin = make_password(plain_pin)
-            
-            new_vote = Voters(
-                student=student_id,
-                names=names,
-                pin=hashed_pin 
-            )
-            new_vote.save()
-            success_message = "You have registered as a voter successfully"
-        else:
-            error_message = "You have already registered as a voter."
+            # Check if the student is already registered as a voter
+            if not Voters.objects.filter(student=student).exists():
+                hashed_pin = make_password(plain_pin)
+                
+                new_voter = Voters(
+                    student=student,
+                    email=email,
+                    pin=hashed_pin 
+                )
+                new_voter.save()
+                success_message = "You have registered as a voter successfully."
+            else:
+                error_message = "You have already registered as a voter."
+        except Student.DoesNotExist:
+            error_message = "Invalid registration number. Please make sure you are a registered student."
+    
+    return render(request, "register.html", {'students': students, 'success_message': success_message, 'error_message': error_message})
 
-    return render(request, "register.html", {'students': student, 'success_message': success_message, 'error_message': error_message})
+
+def forgotPin(request):
+    success_message = ""
+    error_message = ""
+    
+    if request.method == 'POST':
+        regnumber = request.POST['regnumber']
+        email = request.POST['email']
+        
+        try:
+            voter = Voters.objects.get(student__regNumber=regnumber, email=email)
+            new_pin = str(random.randint(1000, 9999))
+            voter.pin = make_password(new_pin)
+            voter.save()
+
+            subject = "UR Voting management system"
+            message = f"Your PIN has been reset to {new_pin}. Please remember it."
+            from_email = "muhireyves81@gmail.com"  
+            recipient_list = [email]
+            send_mail(subject, message, from_email, recipient_list)
+            success_message = f"Your PIN has been reset. Check your email."
+        except ObjectDoesNotExist:
+            error_message = "Invalid registration number or email. Please make sure you are a registered voter."
+    
+    return render(request, "forgot_pin.html", {'success_message': success_message, 'error_message': error_message})
 
 def signingAdmin(request):
     if request.method == 'POST':
@@ -106,11 +139,33 @@ def viewVots(request, category_id):
         for candidate in candidates:
             votes_count = Vote.objects.filter(category=category, candidate=candidate).count()
             candidate_votes[candidate] = votes_count
+
         sorted_candidates = sorted(candidate_votes.items(), key=lambda x: x[1], reverse=True)
 
-        return render(request, "voting_result.html", {'category': category, 'sorted_candidates': sorted_candidates})
+        # Retrieve voters who haven't voted in the selected category
+        all_voters = Voters.objects.all()
+        voters_who_did_not_vote = []
+
+        for voter in all_voters:
+            if not Vote.objects.filter(voter=voter, category=category).exists():
+                voters_who_did_not_vote.append(voter)
+
+        # Retrieve voters who have voted in the selected category
+        voters_who_voted = []
+
+        for vote in Vote.objects.filter(category=category):
+            voter = vote.voter
+            if voter not in voters_who_voted:
+                voters_who_voted.append(voter)
+
+        return render(request, "voting_result.html", {
+            'category': category,
+            'sorted_candidates': sorted_candidates,
+            'voters_who_did_not_vote': voters_who_did_not_vote,
+            'voters_who_voted': voters_who_voted
+        })
     else:
-        return render(request, "category_not_found.html") 
+        return render(request, "category_not_found.html")
 
 import logging
 
@@ -163,11 +218,9 @@ def ussdapp(request):
                 categories = Category.objects.all()
                 for idx, category in enumerate(categories, start=1):
                     response += f"{idx}. {category.categoryName}\n"
-            elif level[3] == '2':
-                response = "END Thank you for voting!\n"
         elif level[0] == '1' and len(level) == 5:
             # Vote selection
-            category_idx = int(level[3]) - 1
+            category_idx = int(level[4]) - 1  # Note the change in index here
             categories = Category.objects.all()
             if 0 <= category_idx < len(categories):
                 category = categories[category_idx]
@@ -180,7 +233,7 @@ def ussdapp(request):
         elif level[0] == '1' and len(level) == 6:
             # Finalize vote
             try:
-                category_idx = int(level[3]) - 1
+                category_idx = int(level[4]) - 1  # Note the change in index here
                 category = Category.objects.all()[category_idx]
                 candidate_idx = int(level[5]) - 1
                 candidates = Candidate.objects.filter(category=category)
@@ -202,4 +255,3 @@ def ussdapp(request):
 
         return HttpResponse(response)
     return HttpResponse('Welcome')
-

@@ -608,3 +608,547 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 120, in viewVots
+    return render(request, "voting_result.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/defaulttags.py", line 226, in render
+    raise ValueError(
+ValueError: Need 2 values to unpack in for loop; got 1. 
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 120, in viewVots
+    return render(request, "voting_result.html", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/template/defaulttags.py", line 226, in render
+    raise ValueError(
+ValueError: Need 2 values to unpack in for loop; got 1. 
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 123, in viewVots
+    'voters_who_did_not_vote': voters_who_did_not_vote,
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'voters_who_did_not_vote' is not defined
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 123, in viewVots
+    'voters_who_did_not_vote': voters_who_did_not_vote,
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'voters_who_did_not_vote' is not defined
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 123, in viewVots
+    'voters_who_did_not_vote': voters_who_did_not_vote,
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'voters_who_did_not_vote' is not defined
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 123, in viewVots
+    'voters_who_did_not_vote': voters_who_did_not_vote,
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'voters_who_did_not_vote' is not defined
+Internal Server Error: /viewVots/363d4392-d81a-41e7-8012-ed26e238b1ae/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 123, in viewVots
+    'voters_who_did_not_vote': voters_who_did_not_vote,
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'voters_who_did_not_vote' is not defined
+Internal Server Error: /viewVots/7a80fbb7-5c49-483e-8d99-21479b79871f/
+Traceback (most recent call last):
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/myenv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waka/philz/Voting_Ussd_App/home/views.py", line 123, in viewVots
+    'voters_who_did_not_vote': voters_who_did_not_vote,
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'voters_who_did_not_vote' is not defined
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/waka/philz/Voting_Ussd_App/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /admin/home/voters/5edd543f-ec79-4b45-9800-eac625eb568c/change/
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: home_voters.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 1767, in _changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 866, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: home_voters.email
+Internal Server Error: /admin/home/voters/
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: home_voters.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/contrib/admin/options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: home_voters.email
+Internal Server Error: /voterRegister
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'names'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/vot/home/views.py", line 25, in voterRegister
+    email = request.POST['email']
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'names'
+Internal Server Error: /voterRegister
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'names'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/vot/home/views.py", line 25, in voterRegister
+    email = request.POST['email']
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'names'
+Internal Server Error: /voterRegister
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'names'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/vot/home/views.py", line 25, in voterRegister
+    email = request.POST['email']
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'names'
+/Users/apple/philz_devs/python/voting_app/vot/home/migrations/0002_remove_vote_student_voters_vote_voter.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /voterRegister
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'pin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/apple/philz_devs/python/voting_app/vot/home/views.py", line 28, in voterRegister
+    plain_pin = request.POST['pin']
+  File "/Users/apple/philz_devs/python/voting_app/env_vot/lib/python3.9/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'pin'
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/vot/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/vot/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/vot/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/vot/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/vot/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden (CSRF token from POST incorrect.): /forgotPin
+Forbidden (CSRF token from POST incorrect.): /forgotPin
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/apple/philz_devs/python/voting_app/vot/home/views.py changed, reloading.
+Watching for file changes with StatReloader

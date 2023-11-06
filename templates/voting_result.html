@@ -34,6 +34,12 @@
                       <li class="nav-item">
                         <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Voting Results for {{ category.categoryName }}</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-three-home3-tab" data-toggle="pill" href="#custom-tabs-three-home3" role="tab" aria-controls="custom-tabs-three-home3" aria-selected="true">Students voted for {{ category.categoryName }}</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " id="custom-tabs-three-home2-tab" data-toggle="pill" href="#custom-tabs-three-home2" role="tab" aria-controls="custom-tabs-three-home2" aria-selected="true">List of students didn't vote for {{ category.categoryName }}</a>
+                      </li>
                     </ul>
                   </div>
                   <div class="card-body">
@@ -55,6 +61,7 @@
                             <table id="example1" class="table table-bordered table-striped">
                               <thead>
                               <tr>
+                                <th>Reg Number of candidate </th>
                                 <th>Candidates </th>
                                 <th>Votes</th>
                               </tr>
@@ -63,6 +70,7 @@
 
                                 {% for candidate, votes in sorted_candidates %}
                                 <tr>
+                                    <td>{{ candidate.student }}</td>
                                     <td>{{ candidate.student.name }}</td>
                                     <td>{{ votes }}</td>
                                 </tr>
@@ -71,8 +79,65 @@
                               </tbody>
                               <tfoot>
                                 <tr>
+                                  <th>Reg Number </th>
                                   <th>Candidates </th>
                                   <th>Votes</th>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-home2" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                              <thead>
+                              <tr>
+                                <th>Reg Number of voter / student </th>
+                                <th>Voter / student </th>
+                              </tr>
+                              </thead>
+                              <tbody>
+
+                                {% for voter in voters_who_did_not_vote %}
+                                <tr>
+                                    <td>{{ voter }}</td>
+                                    <td>{{ voter.names }}</td>
+                                </tr>
+
+                                {% endfor %}
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <th>Reg Number of voter / student </th>
+                                  <th>Voter / student </th>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="custom-tabs-three-home3" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                              <thead>
+                              <tr>
+                                <th>Reg Number of voter / student </th>
+                                <th>Voter / student </th>
+                              </tr>
+                              </thead>
+                              <tbody>
+
+                                {% for voters in voters_who_voted %}
+                                <tr>
+                                    <td>{{ voters }}</td>
+                                    <td>{{ voters.names }}</td>
+                                </tr>
+
+                                {% endfor %}
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <th>Reg Number of voter / student </th>
+                                  <th>Voter / student </th>
                                 </tr>
                               </tfoot>
                             </table>
